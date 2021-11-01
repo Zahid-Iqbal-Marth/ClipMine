@@ -1,0 +1,412 @@
+html {
+    font-size: 40px;
+}
+
+body {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+.sub-title-text {
+    font-size: 0.75rem;
+}
+
+.desc-text {
+    font-size: 0.5rem;
+}
+
+.flex-box {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.space-evenly {
+    justify-content: space-evenly;
+}
+
+.placement-center {
+    justify-content: center;
+}
+
+/* header and navbar section */
+.nav-grid {
+    display: grid;
+    grid-template-columns: 15% 45% 40%;
+    grid-template-rows: 80px;
+    grid-template-areas: "logo left-nav right-nav";
+    align-items: center;
+}
+
+.nav-left {
+    grid-area: left-nav;
+}
+
+.nav-right {
+    grid-area: right-nav;
+    justify-self: flex-end;
+}
+
+.logo {
+    padding: 10px;
+}
+
+.nav-elements {
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.nav-elements a {
+    font-size: 0.5rem;
+    padding: 30px;
+    color: rgb(63, 56, 56);
+
+}
+
+.nav-elements a:hover {
+    animation-name: navHover;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+.nav-elements .search {
+    color: rgb(4, 194, 251);
+}
+
+@keyframes navHover {
+    100% {
+        color: rgb(4, 194, 251);
+    }
+}
+
+/* css for responsice navbar */
+.nav-list {
+    display: none;
+}
+
+nav .menu-btn i {
+    color: black;
+    font-size: 0.51rem;
+    cursor: pointer;
+    display: none;
+    position: absolute;
+    top: 4vh;
+    right: 3vw;
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+
+/* main grid section */
+.main-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(7, auto);
+}
+
+.background {
+    background-image: url("./media/background/top-section_4360x1500.jpg");
+    height: 100vh;
+    max-width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-center .title {
+    margin-top: 10vh;
+    font-size: 1.05rem;
+    font-weight: normal;
+    padding: 20px;
+}
+
+.text-center .desc {
+    font-size: 0.525rem;
+    max-width: 70%;
+    margin: 10vh auto;
+}
+
+.text-center .intro-content{
+    margin: 30vh 0 0;
+}
+
+.signup-btn {
+    font-size: 0.5rem;
+    padding: 20px 80px;
+    margin: 20px auto;
+    background-color: rgb(6, 96, 148);
+    border-radius: 5px;
+    display: block;
+    color: white;
+}
+
+/* News Section */
+.news-feat-box {
+    width: 400px;
+    height: auto;
+    margin: 20px 0;
+    transition: transform 0.3s;
+
+}
+
+.news-feat-box:hover {
+    transform: scale(1.1);
+}
+
+.news-feat-box img {
+    width: 400px;
+}
+
+small {
+    padding: 4px;
+}
+
+.news-feat-box .stats {
+    width: 100%;
+    height: 40px;
+    background-color: rgb(228, 226, 226);
+    border-radius: 5px;
+}
+
+small {
+    font-size: 16px;
+}
+
+/* increased specificity using .flex-box class */
+.flex-box .stats-icon {
+    font-size: 0.5rem;
+    margin-top: 20px;
+}
+
+/* benifits */
+.benifit-box {
+    width: 80%;
+    height: auto;
+    margin: 20px auto;
+}
+
+.benifit-grid {
+    margin-top: 5vh;
+    display: grid;
+    grid-template-columns: 30% 70%;
+    grid-template-rows: auto;
+    grid-template-areas: "image desc";
+    transition: transform 0.3s;
+}
+
+.benifit-grid:hover {
+    transform: scale(1.1);
+}
+
+.benifit-grid img {
+    padding-left: 50%;
+    grid-area: image;
+}
+
+.benifit-grid .benifit-detail {
+    grid-area: desc;
+    padding-right: 20%;
+}
+
+/* ClipMine Video Collections */
+.video-link {
+    color: white;
+    position: relative;
+    top: 40%;
+}
+
+.video-box {
+    width: 560px;
+    height: 200px;
+    text-align: center;
+    margin-top: 20px;
+    transition: transform 0.3s;
+}
+
+.startup {
+    background-image: url("media/collections/collection-startup_920x368.png");
+}
+
+.ml {
+    background-image: url("media/collections/collection-ml_922x368.png");
+}
+
+.video-box:hover {
+    transform: translateY(-10px);
+}
+
+.videos-desc {
+    margin: 10vh auto;
+    max-width: 50%;
+}
+
+/* Who's using Clipmine */
+.grey-back {
+    background-color: rgb(216, 216, 216);
+}
+
+.clipmine-users img {
+    margin: 20px;
+}
+
+.partners-section-footer a {
+    color: rgb(0, 195, 255);
+}
+
+/* Tag section */
+.tag-text {
+    max-width: 90%;
+    margin: 10px auto 10vh;
+}
+
+.tag-input {
+    width: 40%;
+    padding: 20px;
+    color: rgb(177, 175, 175);
+}
+
+.tag-btn {
+    background-color: rgb(2, 118, 251);
+    padding: 10px;
+    color: white;
+    font-size: 0.75rem;
+}
+
+/* supportedPlateFormSection */
+.grey-back img {
+    transition: transform 0.3s;
+}
+
+.icons {
+    margin: 10vh;
+}
+
+.grey-back img:hover {
+    transform: translateY(10px);
+}
+
+/* footer */
+footer {
+    font-size: 14px;
+}
+
+footer a {
+    margin: 0 auto;
+}
+
+/* media quries */
+@media screen and (max-width: 1400px) {
+    .benifit-grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+        grid-template-areas: "image""desc";
+    }
+
+    .benifit-grid img {
+        padding: 0;
+        margin: 0 auto;
+    }
+
+    .benifit-grid .benifit-detail {
+        text-align: center;
+        margin: 0 auto;
+        padding: 0 20%;
+    }
+
+    .logo {
+        content: url("./media/logo/cm_logo_embed_66x40.png");
+    }
+}
+
+@media screen and (max-width: 649px) {
+    .news-feat-box {
+        width: 350px;
+        text-align: center;
+    }
+
+    .news-feat-box img {
+        width: 350px;
+    }
+
+    .benifit-detail {
+        text-align: center;
+        width: 75%;
+    }
+
+    .benifit-grid .benifit-detail {
+        padding: 0;
+    }
+
+    html {
+        font-size: 45px;
+    }
+
+}
+
+@media screen and (max-width: 950px) {
+
+    .nav-elements {
+        display: none;
+    }
+
+    .nav-list {
+        display: block;
+    }
+
+    nav .menu-btn i {
+        display: block;
+    }
+
+    .nav-elements a {
+        color: #f2f2f2;
+        font-size: 0.5rem;
+        letter-spacing: 1px;
+        transition: 0.3s;
+        font-weight: bold;
+    }
+
+    nav ul {
+        position: fixed;
+        top: 35px;
+        right: -100%;
+        background: rgba(0, 0, 0, 0.9);
+        height: 100vh;
+        width: 40%;
+        text-align: center;
+        transition: 0.3s;
+        padding-right: 5%;
+
+    }
+
+    #click:checked~ul {
+        right: 0;
+    }
+
+    nav ul li {
+        margin: 40px 0;
+        list-style: none;
+    }
+
+    nav ul li a {
+        display: block;
+        font-size: 0.5rem;
+        transition: 0.6s;
+    }
+
+    #click:checked~ul li a {
+        margin-left: 0;
+    }
+
+    nav ul li a:hover {
+        background: none;
+        color: rgb(4, 194, 251);
+    }
+}
